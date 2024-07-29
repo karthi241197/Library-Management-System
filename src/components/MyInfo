@@ -1,0 +1,32 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './MyInfo.css'; // You can create a separate CSS file for styling
+
+const MyInfo = () => {
+  const [showUserInfo, setShowUserInfo] = useState(false);
+  const navigate = useNavigate();
+  
+  const handleLogout = () => {
+    localStorage.removeItem('loggedInUser');
+    navigate('/');
+  };
+
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+  if (!loggedInUser) return null; // Render nothing if user is not logged in
+
+  return (
+    <div className="user-info">
+      <button onClick={() => setShowUserInfo(!showUserInfo)} className="my-info-button">My Info</button>
+      {showUserInfo && (
+        <div className="user-info-popup">
+          <p>Name: {loggedInUser.name}</p>
+          <p>Email: {loggedInUser.email}</p>
+          <button onClick={handleLogout} className="logout-button">Logout</button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default MyInfo;

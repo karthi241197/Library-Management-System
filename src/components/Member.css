@@ -1,0 +1,60 @@
+.member-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logout-button {
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: darkred;
+}
+
+.search-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.books-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.books-table th,
+.books-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.books-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.books-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.books-table tr:hover {
+  background-color: #ddd;
+}
+
+.books-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}

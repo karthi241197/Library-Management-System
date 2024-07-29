@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "history": [
+        {
+          "title": "The Great Gatsby",
+          "borrowedDate": "2023-05-01",
+          "returnedDate": "2023-05-15"
+        },
+        {
+          "title": "1984",
+          "borrowedDate": "2023-06-01",
+          "returnedDate": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "history": [
+        {
+          "title": "To Kill a Mockingbird",
+          "borrowedDate": "2023-04-01",
+          "returnedDate": "2023-04-20"
+        },
+        {
+          "title": "Moby-Dick",
+          "borrowedDate": "2023-07-01",
+          "returnedDate": "2023-07-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "history": [
+        {
+          "title": "Pride and Prejudice",
+          "borrowedDate": "2023-03-01",
+          "returnedDate": "2023-03-25"
+        },
+        {
+          "title": "War and Peace",
+          "borrowedDate": "2023-05-15",
+          "returnedDate": "2023-06-01"
+        }
+      ]
+    }
+  ]
+  
