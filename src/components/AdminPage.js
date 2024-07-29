@@ -103,7 +103,7 @@ const AdminPage = () => {
 
   useEffect(() => {
     handleSearch();
-  }, [searchQuery, books]);
+  });
 
   const handleViewHistoryClick = (member) => {
     const memberHistory = JSON.parse(localStorage.getItem('membersBooks')) || [];
