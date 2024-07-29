@@ -20,7 +20,7 @@ const AdminPage = () => {
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (!loggedInUser || loggedInUser.role !== 'admin') {
-      navigate('/');
+      navigate('/Library-Management-System');
     }
 
     const booksData = JSON.parse(localStorage.getItem('books')) || [];
@@ -155,7 +155,7 @@ const AdminPage = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('loggedInUser');
-    navigate('/');
+    navigate('/Library-Management-System');
   };
 
   return (

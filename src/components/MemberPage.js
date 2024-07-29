@@ -11,7 +11,7 @@ const MemberPage = () => {
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (!loggedInUser || loggedInUser.role !== 'member') {
-      navigate('/');
+      navigate('/Library-Management-System');
     }
 
     const membersBooks = JSON.parse(localStorage.getItem('membersBooks')) || [];
@@ -57,7 +57,7 @@ const MemberPage = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('loggedInUser');
-    navigate('/');
+    navigate('/Library-Management-System');
   };
 
   const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchTerm.toLowerCase()));

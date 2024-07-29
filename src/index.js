@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginPage from './components/LoginPage';
-import AdminPage from './components/AdminPage';
-import MemberPage from './components/MemberPage';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, } from 'react-router-dom';
+
+import App from './App';
 import './index.css';
 
 const initializeLocalStorage = () => {
@@ -32,15 +31,14 @@ const initializeLocalStorage = () => {
 
 initializeLocalStorage();
 
-ReactDOM.render(
-  <Router>
-    <div>
-    <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/admin" element={<AdminPage />} />
-      <Route path="/member" element={<MemberPage />} />
-    </Routes>
-    </div>
-  </Router>,
-  document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+ 
+ <React.StrictMode>
+    
+    <Router>
+    <App/>
+  </Router>
+  </React.StrictMode>
 );
+
