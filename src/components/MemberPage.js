@@ -60,7 +60,9 @@ const MemberPage = () => {
     navigate('/Library-Management-System');
   };
 
-  const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        book.genre.toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
     <div className="member-container">
@@ -70,7 +72,7 @@ const MemberPage = () => {
       </div>
       <input
         type="text"
-        placeholder="Search by title..."
+        placeholder="Search by Title, Author, Genre..."
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
         className="search-input"
@@ -80,6 +82,7 @@ const MemberPage = () => {
           <tr>
             <th>Title</th>
             <th>Author</th>
+            <th>Genre</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -90,6 +93,7 @@ const MemberPage = () => {
               <tr key={book.id}>
                 <td>{book.title}</td>
                 <td>{book.author}</td>
+                <td>{book.genre}</td>
                 <td>
                   {hasBorrowed ? (
                     <button onClick={() => handleReturnBook(book)}>Return</button>

@@ -209,7 +209,7 @@ const AdminPage = () => {
               className="form-input"
               type="text"
               name="search"
-              placeholder="Search by Title"
+              placeholder="Search by Title, Author, Genre..."
               value={searchQuery}
               onChange={handleSearchChange}
             />
